@@ -8,7 +8,11 @@ d3.json(url).then((data)=> {
     data.names.forEach(function(name) {
         d3.select("#selDataset").append("option").text(name).property("value");
     });
+    var firstSample = data.names[0];
+console.log(firstSample)
+optionChanged(firstSample)
 });
+
 
 }
 
@@ -141,7 +145,7 @@ function getDemoData(valueselected) {
         var y = radius * Math.sin(radians);
         
         // Path: may have to change to create a better triangle
-        var mainPath = 'M -.0 -0.035 L .0 0.035 L ',
+        var mainPath = 'M -.0 -0.050 L .0 0.035 L ',
              pathX = String(x),
              space = ' ',
              pathY = String(y),
@@ -184,7 +188,7 @@ function getDemoData(valueselected) {
           var layout = {
             shapes:[{
                 type: 'path',
-                path: gaugePointer(90),
+                path: gaugePointer(wref),
                 fillcolor: '850000',
                 line: {
                   color: '850000'
