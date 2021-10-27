@@ -1,6 +1,6 @@
-//let url = "../data/samples.json"
+let url = "data/samples.json"
 function start(){
-//let url = "../data/samples.json"
+let url = "data/samples.json"
 
 d3.json(url).then((data)=> {
     console.log(data)
